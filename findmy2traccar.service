@@ -1,0 +1,11 @@
+[Unit]
+Description=FindMy2Traccar-Agent
+After=multi-user.target
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python3 /path/to/your/script.py
+StartLimitBurst=5
+StartLimitInterval=120
+[Install]
+WantedBy=multi-user.target
